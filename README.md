@@ -6,9 +6,9 @@ Information on the current version:
 
 	<groupId>jxlpoi</groupId>
 	<artifactId>jxlpoi</artifactId>
-	<version>0.0.8</version>
+	<version>0.0.15</version>
 
-This currently depends on Apache POI 3.15.
+This currently depends on Apache POI 3.10-FINAL.
 
 To use this wrapper, we should only have to change the import statement.
 
