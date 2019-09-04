@@ -1113,32 +1113,32 @@ class WritableSheetImpl implements WritableSheet
     numRows--;
   }
 
-  private org.apache.poi.ss.usermodel.CellType translateCellType(WritableCell cell) {
+  private int translateCellType(WritableCell cell) {
 	  jxlpoi.CellType cType = cell.getType();
 	  if (cType == jxlpoi.CellType.BOOLEAN) {
-		  return org.apache.poi.ss.usermodel.CellType.BOOLEAN;
+		  return XSSFCell.CELL_TYPE_BOOLEAN;
 	  } else if (cType == jxlpoi.CellType.BOOLEAN_FORMULA ) {
-		  return org.apache.poi.ss.usermodel.CellType.FORMULA;
+		  return XSSFCell.CELL_TYPE_FORMULA;
 	  } else if (cType == jxlpoi.CellType.DATE) {
-		  return org.apache.poi.ss.usermodel.CellType.NUMERIC; //??
+		  return XSSFCell.CELL_TYPE_NUMERIC; // ?
 	  } else if (cType == jxlpoi.CellType.DATE_FORMULA) {
-		  return org.apache.poi.ss.usermodel.CellType.FORMULA;
+		  return XSSFCell.CELL_TYPE_FORMULA;
 	  } else if (cType == jxlpoi.CellType.EMPTY) {
-		  return org.apache.poi.ss.usermodel.CellType.BLANK;
+		  return XSSFCell.CELL_TYPE_BLANK;
 	  } else if (cType == jxlpoi.CellType.ERROR) {
-		  return org.apache.poi.ss.usermodel.CellType.ERROR;
+		  return XSSFCell.CELL_TYPE_ERROR;
 	  } else if (cType == jxlpoi.CellType.FORMULA_ERROR) {
-		  return org.apache.poi.ss.usermodel.CellType.ERROR;
+		  return XSSFCell.CELL_TYPE_ERROR;
 	  } else if (cType == jxlpoi.CellType.LABEL) {
-		  return org.apache.poi.ss.usermodel.CellType.STRING;
+		  return XSSFCell.CELL_TYPE_STRING;
 	  } else if (cType == jxlpoi.CellType.NUMBER) {
-		  return org.apache.poi.ss.usermodel.CellType.NUMERIC;
+		  return XSSFCell.CELL_TYPE_NUMERIC;
 	  } else if (cType == jxlpoi.CellType.NUMBER_FORMULA) {
-		  return org.apache.poi.ss.usermodel.CellType.FORMULA;
+		  return XSSFCell.CELL_TYPE_FORMULA;
 	  } else if (cType == jxlpoi.CellType.STRING_FORMULA) {
-		  return org.apache.poi.ss.usermodel.CellType.FORMULA;
+		  return XSSFCell.CELL_TYPE_FORMULA;
 	  } else {
-		  return org.apache.poi.ss.usermodel.CellType.STRING;
+		  return XSSFCell.CELL_TYPE_STRING;
 	  }
   }
   /**

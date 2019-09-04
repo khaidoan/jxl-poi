@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>jxlpoi</groupId>
 	<artifactId>jxlpoi</artifactId>
-	<version>0.0.8</version>
+	<version>0.0.15</version>
   
 	<repositories>
 		<repository>
@@ -44,15 +44,9 @@
 
   <dependencies>
 	<dependency>
-		<groupId>org.apache.poi</groupId>
-		<artifactId>poi-ooxml</artifactId>
-		<version>3.15</version>
-		<exclusions>
-			<exclusion>
-				<groupId>org.apache.xmlbeans</groupId>
-				<artifactId>xmlbeans</artifactId>
-			</exclusion>
-		</exclusions>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi-ooxml</artifactId>
+	    <version>3.10-FINAL</version>
 	</dependency>
 	<dependency>
 		<groupId>org.apache.logging.log4j</groupId>

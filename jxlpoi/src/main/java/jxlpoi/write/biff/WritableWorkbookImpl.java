@@ -354,8 +354,9 @@ public class WritableWorkbookImpl extends WritableWorkbook
    */
   public void close() throws IOException, JxlWriteException
   {
-    //outputFile.close(closeStream);
-	  poiWorkbook.close();
+	  outputStream.flush();
+	  outputStream.close();
+	  //poiWorkbook.close();
   }
 
   /**
